@@ -33,7 +33,7 @@ export default function ChatPage() {
         return [...withoutTyping, { 
           role: "bot", text: data.reply }];
       });
-    } catch (error) {
+    } catch {
       setMessages((prev) => [
         ...prev.filter((m) => m.text !== "Typing..."),
         { role: "bot", 
